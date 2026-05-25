@@ -54,9 +54,13 @@ ORDER BY TotalEmployees DESC;
 --
 ### Insight
 This analysis helps HR understand workforce concentration across departments and supports resource planning.
+
 ---
-### 2. High-Performing Employee Analysis 
-### Business Question: Which employees scored above 85 in training but remain within lower salary bands and were hired after 2022?
+
+## 2. High-Performing Employee Analysis
+
+### Business Question
+Which employees scored above 85 in training, remained within lower salary bands, and were hired after 2022?
 
 ```sql
 SELECT 
@@ -69,7 +73,7 @@ SELECT
     e.HireDate
 FROM Employees e
 JOIN TrainingRecords t
- ON e.EmployeeID = t.EmployeeID
+    ON e.EmployeeID = t.EmployeeID
 WHERE t.Score > 85
     AND e.Salary < 40000
     AND YEAR(e.HireDate) > 2022
@@ -77,7 +81,7 @@ ORDER BY t.Score DESC;
 ```
 
 ### Insight
-This analysis identifies newer high-performing employees who may be suitable for progression opportunities, retention strategies, or salary review discussions.
+This analysis identified newer high-performing employees who achieved strong training results while remaining within lower salary bands. The findings could support salary review discussions, employee retention strategies, and internal progression planning.
 
 ---
 ## 3. Employees Without Training Records
