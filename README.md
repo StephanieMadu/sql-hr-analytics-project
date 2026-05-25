@@ -153,10 +153,10 @@ A Common Table Expression (CTE) was used to simplify salary aggregation analysis
 ---
 
 ## Project Outcome
-
+```
 This project demonstrates my ability to create relational databases, write business-focused SQL queries, and transform raw HR data into actionable workforce insights for reporting and decision-making.
---
 
+```
 # Author
 
 Stephanie Madojemu
