@@ -55,12 +55,10 @@ ORDER BY TotalEmployees DESC;
 ### Insight
 This analysis helps HR understand workforce concentration across departments and supports resource planning.
 
----
-
+```
 ## 2. High-Performing Employee Analysis
 
-### Business Question
-Which employees scored above 85 in training, remained within lower salary bands, and were hired after 2022?
+### Business Question: Which employees scored above 85 in training, remained within lower salary bands, and were hired after 2022?
 
 ```sql
 SELECT 
@@ -99,7 +97,7 @@ JOIN Departments d
 LEFT JOIN TrainingRecords t
     ON e.EmployeeID = t.EmployeeID
 WHERE t.EmployeeID IS NULL;
-
+```
 ### Insight:
 This helps HR identify employees who may require onboarding or additional development support.
 
@@ -120,7 +118,7 @@ SELECT
 FROM Employees e
 JOIN Departments d
     ON e.DepartmentID = d.DepartmentID;
-   --- 
+   ``` 
 ## Insight:
 Window functions were used to rank employees by salary within departments to support internal pay analysis.
 
