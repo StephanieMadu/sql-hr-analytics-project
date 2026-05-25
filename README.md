@@ -1,6 +1,3 @@
-# sql-hr-analytics-project
-HR Analytics using SQL
-
 # HR Workforce Analytics SQL Project
 
 ## Overview
