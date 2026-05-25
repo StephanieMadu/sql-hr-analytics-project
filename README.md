@@ -54,9 +54,8 @@ ORDER BY TotalEmployees DESC;
 --
 ### Insight
 This analysis helps HR understand workforce concentration across departments and supports resource planning.
-
-### 2. High-Performing Employee Analysis
-
+---
+### 2. High-Performing Employee Analysis 
 ### Business Question: Which employees scored above 85 in training but remain within lower salary bands and were hired after 2022?
 
 ```sql
@@ -117,11 +116,11 @@ SELECT
 FROM Employees e
 JOIN Departments d
     ON e.DepartmentID = d.DepartmentID;
-    
+   --- 
 ## Insight:
 Window functions were used to rank employees by salary within departments to support internal pay analysis.
 
-
+---
 ## 5. Department Salary Analysis Using CTE
 
 ### Business Question: Which departments have an average salary above £50,000?
