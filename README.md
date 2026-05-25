@@ -83,6 +83,8 @@ This analysis identifies newer high-performing employees who may be suitable for
 ---
 ## 3. Employees Without Training Records
 ### Business Question: Which employees have not completed training?
+
+```sql
 SELECT 
     e.FirstName,
     e.LastName,
@@ -101,6 +103,8 @@ This helps HR identify employees who may require onboarding or additional develo
 ----
 ### 4. Salary Ranking by Department
 ## Business Question: Who are the highest-paid employees within each department?
+
+```sql
 SELECT 
     e.FirstName,
     e.LastName,
@@ -121,6 +125,8 @@ Window functions were used to rank employees by salary within departments to sup
 ## 5. Department Salary Analysis Using CTE
 
 ### Business Question: Which departments have an average salary above £50,000?
+
+```sql
 WITH DepartmentSalary AS (
     SELECT 
         d.DepartmentName,
@@ -130,7 +136,6 @@ WITH DepartmentSalary AS (
         ON e.DepartmentID = d.DepartmentID
     GROUP BY d.DepartmentName
 )
-
 SELECT *
 FROM DepartmentSalary
 WHERE AverageSalary > 50000;
